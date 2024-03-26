@@ -1,0 +1,143 @@
+/*********************************************
+
+Default UI
+
+*********************************************/
+body, html{
+    margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+ul {
+    list-style-type: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 0;
+}
+p {
+    display: block;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+small {
+    display: block;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+strong{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    
+}
+
+a{ 
+    text-decoration: none; 
+    cursor: pointer;
+}
+button{ 
+    border: 0;
+    text-decoration: none; 
+    cursor: pointer;
+}
+hr {
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+    border-style: none;
+    border-width: 0;
+}
+
+/*********************************************
+
+ARTBOARDS
+
+*********************************************/
+.artboards {
+    display: flex;
+    line-height: 0;
+}
+.artboard canvas{
+    width: 350px;
+}
+.layers {
+    border: 1px dotted black;
+}
+
+.layer1 {
+    position: absolute;
+    z-index: 7;
+}
+
+.layer2 {
+    position: absolute;
+    z-index: 6;
+}
+
+.layer3 {
+    position: absolute;
+    z-index: 5;
+}
+
+.layer4 {
+    position: absolute;
+    z-index: 4;
+}
+
+.layer5 {
+    position: absolute;
+    z-index: 3;
+}
+
+.layer6 {
+    position: absolute;
+    z-index: 2;
+}
+
+.layer7 {
+    z-index: 1;
+}
+
+
+.imagine {
+    border: 2px solid var(--primary);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: var(--alt);
+    background-color: var(--primary);
+    font-family: 'Sitaoy', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    cursor: pointer;
+    padding: 20px;
+    box-shadow: 0px 30px 60px var(--primary);
+
+    /* fx */
+    -webkit-transition: background-color 1s ease-out;
+    -moz-transition: background-color 1s ease-out;
+    -o-transition: background-color 1s ease-out;
+    transition: background-color 1s ease-out;
+}
+
+.imagine:hover {
+    color: var(--primary);
+    background-color: var(--alt);
+}
