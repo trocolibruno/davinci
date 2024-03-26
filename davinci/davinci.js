@@ -55,9 +55,9 @@ function genPB(prompt, id, layerType) {
 // GENERATIVE GRADIENT BACKGROUND
 
 ///////////////////////////////////////////////
-genPG(backgroundP1, gradientType1, "#00ffcc", "#000000");
-genPG(backgroundP2, gradientType2, "#00ffcc", "#000000");
-genPG(backgroundP3, gradientType3, "#00ffcc", "#000000");
+genPG(backgroundP1, gradientType1, "#f2f2f2", "#dddddd");
+genPG(backgroundP2, gradientType2, "#f2f2f2", "#dddddd");
+genPG(backgroundP3, gradientType3, "#f2f2f2", "#dddddd");
 
 function genPG(layerType, gradientType, gradientStart, gradientEnd) {
   var gradient = layerType.createLinearGradient.apply(layerType, gradientType);

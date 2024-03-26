@@ -1,66 +1,146 @@
 /*********************************************
 
-Default UI
+DESIGN SYSTEM
 
 *********************************************/
-body, html{
-    margin: 0;
-}
-h1, h2, h3, h4, h5, h6 {
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
-}
-ul {
-    list-style-type: none;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
-    padding-inline-start: 0;
-}
-p {
-    display: block;
-    margin-block-start: 0em;
-    margin-block-end: 0em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-}
-small {
-    display: block;
-    margin-block-start: 0em;
-    margin-block-end: 0em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-}
-strong{
-    margin-block-start: 0em;
-    margin-block-end: 0em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+.primary-font {
+    font-family: "Montserrat", sans-serif;
 }
 
-a{ 
-    text-decoration: none; 
-    cursor: pointer;
+.secondary-font {
+    font-family: "Playfair Display", serif;
 }
-button{ 
-    border: 0;
-    text-decoration: none; 
-    cursor: pointer;
+
+:root {
+    --primary: #4e4e4e;
+    --secondary: #F48072;
+    --alt: #CCCCCC;
+    --supervelocity: .5s;
+    --normalvelocity: 1s;
+    --slowvelocity: 2s;
 }
-hr {
-    display: block;
-    unicode-bidi: isolate;
-    margin-block-start: 0.5em;
-    margin-block-end: 0.5em;
-    margin-inline-start: auto;
-    margin-inline-end: auto;
-    overflow: hidden;
-    border-style: none;
-    border-width: 0;
+
+::selection {
+    background: var(--primary);
+}
+
+::-moz-selection {
+    background: var(--primary);
+}
+
+.primary-color {
+    color: var(--primary) !important;
+}
+
+.secondary-color {
+    color: var(--secondary) !important;
+}
+
+.alt-color {
+    color: var(--alt) !important;
+}
+
+input {
+    font-family: "Montserrat", sans-serif;
+    color: var(--primary);
+    width: 100%;
+    height: 40px;
+    border: 1px solid var(--alt);
+    border-radius: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 18px;
+    padding-left: 20px !important;
+}
+
+button {
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--secondary);
+    color: aliceblue;
+    width: 100%;
+    height: 40px;
+    border-radius: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+
+/*********************************************
+
+INDEX
+
+*********************************************/
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    width: 300px;
+}
+
+.create {
+    padding-left: 15%;
+    padding-right: 15%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.create-content1,
+.create-content2 {
+    padding: 10px;
+    box-sizing: content-box;
+}
+
+.create-content-box {
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.create-content-box p {
+    font-family: "Montserrat", sans-serif;
+    color: var(--primary);
+}
+
+.create-content2 h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 50px;
+    color: var(--secondary);
+    line-height: .9;
+}
+
+.create-content2 strong {
+    font-family: "Montserrat", sans-serif;
+    color: var(--secondary);
+}
+
+#create ul {
+    padding-top: 10px;
+}
+
+#create ul li{
+    padding-bottom: 10px;
+}
+
+#create input {
+    border: 0 !important;
+    background-color: #f2f2f2;
+    padding-left: 10px;
+}
+
+.clr-field {
+    display: inherit !important;
+}
+
+.clr-field button {
+    width: 100px !important;
 }
 
 /*********************************************
@@ -72,7 +152,8 @@ ARTBOARDS
     display: flex;
     line-height: 0;
 }
-.artboard canvas{
+
+.artboard canvas {
     width: 400px;
 }
 
@@ -141,4 +222,91 @@ ARTBOARDS
 .imagine:hover {
     color: var(--primary);
     background-color: var(--alt);
+}
+
+/*********************************************
+
+FIX
+
+*********************************************/
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 0;
+}
+
+p {
+    display: block;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+small {
+    display: block;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+strong {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    border: 0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+hr {
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+    border-style: none;
+    border-width: 0;
+}
+
+input[type="text"] {
+    padding-block: 0;
+    padding-inline: 0;
 }

@@ -1,1 +1,67 @@
-Hello World
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DɅVINCI</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
+    <link rel="stylesheet" href="ui.css">
+
+    <!-- coloris-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.js"></script>
+    <script type="text/javascript">
+        Coloris({
+            themeMode: 'dark',
+            alpha: false
+        });
+    </script>
+</head>
+
+<body>
+    <section class="logo">
+        <img src="logo.svg">
+    </section>
+
+    <section class="create">
+        <div class="create-content1">
+            <div class="create-content-box">
+                <p>
+                    DaVinci é o estado da arte na criação de artes generativas. Sem pensar muito,
+                    você pode criar posts e stories rapidamente usando seu navegador.
+                </p>
+                <p>
+
+                </p>
+            </div>
+        </div>
+        <div class="create-content2">
+            <h1>Vamos criar?</h1>
+            <strong>Escolha 3 cores que você gosta</strong>
+
+            <hr>
+
+            <form id="create">
+                <ul>
+                    <li><input type="text" data-coloris value="#000000"></li>
+                    <li><input type="text" data-coloris value="#000000"></li>
+                    <li><input type="text" data-coloris value="#000000"></li>
+                </ul>
+
+                <button type="submit">Criar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- scripts -->
+    <script type="text/javascript">
+        document.getElementById("create").addEventListener("submit", function (event) {
+            event.preventDefault();
+            window.location.href = "gen.html";
+        });
+    </script>
+</body>
+
+</html>
