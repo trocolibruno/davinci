@@ -73,8 +73,9 @@ ARTBOARDS
     line-height: 0;
 }
 .artboard canvas{
-    width: 350px;
+    width: 400px;
 }
+
 .layers {
     border: 1px dotted black;
 }
