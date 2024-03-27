@@ -18,7 +18,7 @@ genD2P3 = Math.floor(Math.random() * details);
 // CREATE BACKGROUND IMAGE
 
 ///////////////////////////////////////////////
-blendMode = "overlay";
+blendMode = "multiply";
 
 ////////////////////////////////////////////////
 

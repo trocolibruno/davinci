@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////
 
-// GENERATIVE POSTS DETAILS
+// GENERATIVE DETAILS - POSTS
 
 ///////////////////////////////////////////////
 var genD1P1, genD2P1, genD1P2, genD2P2, genD1P3, genD2P3;
@@ -15,8 +15,8 @@ genPD(6, 'P3', genD2P3, -289, 400, genColor[5], "1");
 function genPD(layer, postNumber, detailNumber, posX, posY, detailColor, detailOpacity) {
   var artboardLayer = "layer" + layer + postNumber;
   var detail = new Image();
-
   detail.src = detailsFolder + detailNumber + ".svg";
+
   detail.onload = function () {
     var canvas = document.getElementById(artboardLayer);
     var genD = canvas.getContext('2d');
@@ -32,19 +32,20 @@ function genPD(layer, postNumber, detailNumber, posX, posY, detailColor, detailO
 
 ////////////////////////////////////////////////
 
-// GENERATIVE POSTS BACKGROUND
+// GENERATIVE BACKGROUND - POSTS
 
 ///////////////////////////////////////////////
-genPB('3d', 1, backgroundP1);
-genPB('3d', 2, backgroundP2);
-genPB('3d', 3, backgroundP3);
+genPB(1, backgroundP1);
+genPB('texture, abstract, backgrounds', 2, backgroundP2);
+genPB('texture, abstract, backgrounds', 3, backgroundP3);
 
-function genPB(prompt, id, layerType) {
-  var image = new Image()
-  image.src = "https://source.unsplash.com/random/1080x1920?" + prompt + "?v=" + id;
+function genPB(id, layerType) {
+  var image = new Image();
+  image.src = "models/diffusion/diffusion-jpg/01" + ".jpg";
+
   image.onload = function () {
     layerType.globalCompositeOperation = "blendMode";
-    layerType.globalAlpha = 0.4;
+    layerType.globalAlpha = 0.6;
     layerType.drawImage(image, 0, 0);
     layerType.globalCompositeOperation = 'destination-over';
   }
@@ -52,10 +53,10 @@ function genPB(prompt, id, layerType) {
 
 ////////////////////////////////////////////////
 
-// GENERATIVE GRADIENT BACKGROUND
+// GENERATIVE GRADIENT BACKGROUND - POSTS
 
 ///////////////////////////////////////////////
-genPG(backgroundP1, gradientType1, "#f2f2f2", "#dddddd");
+genPG(backgroundP1, gradientType1, "#f2f2f2", "#00ffcc");
 genPG(backgroundP2, gradientType2, "#f2f2f2", "#dddddd");
 genPG(backgroundP3, gradientType3, "#f2f2f2", "#dddddd");
 

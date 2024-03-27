@@ -1,88 +1,122 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>DɅVINCI</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-        <link rel="icon" type="image/svg+xml" href="logo.svg">
-        <link rel="stylesheet" href="ui.css">
-    </head>
 
-    <body>
-        <!-- POST ARTBOARDS -->
-        <section class="artboards" id="posts">
-            <div class="artboard">
-                <canvas id="layer1P1" class="layers layer1"></canvas>
-                <canvas id="layer2P1" class="layers layer2"></canvas>
-                <canvas id="layer3P1" class="layers layer3"></canvas>
-                <canvas id="layer4P1" class="layers layer4"></canvas>
-                <canvas id="layer5P1" class="layers layer5"></canvas>
-                <canvas id="layer6P1" class="layers layer6"></canvas>
-                <canvas id="layer7P1" class="layers layer7"></canvas>
+<head>
+    <title>DɅVINCI</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
+    <link rel="stylesheet" href="ui.css">
+</head>
+
+<body>
+    <!-- TOOLS -->
+    <section class="tools">
+
+    </section>
+
+    <!-- POST ARTBOARDS -->
+    <section class="artboards" id="posts">
+        <div class="artboard">
+            <canvas id="layer1P1" class="layers layer1"></canvas>
+            <canvas id="layer2P1" class="layers layer2"></canvas>
+            <canvas id="layer3P1" class="layers layer3"></canvas>
+            <canvas id="layer4P1" class="layers layer4"></canvas>
+            <canvas id="layer5P1" class="layers layer5"></canvas>
+            <canvas id="layer6P1" class="layers layer6"></canvas>
+            <canvas id="layer7P1" class="layers layer7"></canvas>
+
+            <div class="controls">
+                <button onclick="saveP1()">Salvar</button>
             </div>
+            <script>
+               function saveP1(){
+                var canvas1 = document.getElementById("layer5P1");
+                    var canvas2 = document.getElementById("layer6P1");
+                    var canvas3 = document.getElementById("layer7P1");
+                    var canvasFull = document.createElement('canvas');
+                    var ctx = canvasFull.getContext('2d');
+                    canvasFull.width = canvas1.width;
+                    canvasFull.height = canvas1.height;
 
-            <div class="artboard">
-                <canvas id="layer1P2" class="layers layer1"></canvas>
-                <canvas id="layer2P2" class="layers layer2"></canvas>
-                <canvas id="layer3P2" class="layers layer3"></canvas>
-                <canvas id="layer4P2" class="layers layer4"></canvas>
-                <canvas id="layer5P2" class="layers layer5"></canvas>
-                <canvas id="layer6P2" class="layers layer6"></canvas>
-                <canvas id="layer7P2" class="layers layer7"></canvas>
-            </div>
+                    ctx.drawImage(canvas3, 0, 0);
+                    ctx.drawImage(canvas1, 0, 0);
+                    ctx.drawImage(canvas2, 0, 0);
 
-            <div class="artboard">
-                <canvas id="layer1P3" class="layers layer1"></canvas>
-                <canvas id="layer2P3" class="layers layer2"></canvas>
-                <canvas id="layer3P3" class="layers layer3"></canvas>
-                <canvas id="layer4P3" class="layers layer4"></canvas>
-                <canvas id="layer5P3" class="layers layer5"></canvas>
-                <canvas id="layer6P3" class="layers layer6"></canvas>
-                <canvas id="layer7P3" class="layers layer7"></canvas>
-            </div>
-        </section>
+                    var image = canvasFull.toDataURL("image/png");
+                    var link = document.createElement('a');
+                    link.download = 'canvas.png';
+                    link.href = image;
+                    link.click();
+               }
 
-        <!-- STORY ARTBOARDS -->
-        <section class="artboards" id="stories">
-            <div class="artboard">
-                <canvas id="layer1S1" class="layers layer1"></canvas>
-                <canvas id="layer2S1" class="layers layer2"></canvas>
-                <canvas id="layer3S1" class="layers layer3"></canvas>
-                <canvas id="layer4S1" class="layers layer4"></canvas>
-                <canvas id="layer5S1" class="layers layer5"></canvas>
-                <canvas id="layer6S1" class="layers layer6"></canvas>
-                <canvas id="layer7S1" class="layers layer7"></canvas>
-            </div>
 
-            <div class="artboard">
-                <canvas id="layer1S2" class="layers layer1"></canvas>
-                <canvas id="layer2S2" class="layers layer2"></canvas>
-                <canvas id="layer3S2" class="layers layer3"></canvas>
-                <canvas id="layer4S2" class="layers layer4"></canvas>
-                <canvas id="layer5S2" class="layers layer5"></canvas>
-                <canvas id="layer6S2" class="layers layer6"></canvas>
-                <canvas id="layer7S2" class="layers layer7"></canvas>
-            </div>
+            </script>
+        </div>
 
-            <div class="artboard">
-                <canvas id="layer1S3" class="layers layer1"></canvas>
-                <canvas id="layer2S3" class="layers layer2"></canvas>
-                <canvas id="layer3S3" class="layers layer3"></canvas>
-                <canvas id="layer4S3" class="layers layer4"></canvas>
-                <canvas id="layer5S3" class="layers layer5"></canvas>
-                <canvas id="layer6S3" class="layers layer6"></canvas>
-                <canvas id="layer7S3" class="layers layer7"></canvas>
-            </div>
-        </section>
+        <div class="artboard">
+            <canvas id="layer1P2" class="layers layer1"></canvas>
+            <canvas id="layer2P2" class="layers layer2"></canvas>
+            <canvas id="layer3P2" class="layers layer3"></canvas>
+            <canvas id="layer4P2" class="layers layer4"></canvas>
+            <canvas id="layer5P2" class="layers layer5"></canvas>
+            <canvas id="layer6P2" class="layers layer6"></canvas>
+            <canvas id="layer7P2" class="layers layer7"></canvas>
+        </div>
 
-        <!-- MODEL -->
-        <script type="text/javascript" src="models/diffusion/diffusion.js"></script>
+        <div class="artboard">
+            <canvas id="layer1P3" class="layers layer1"></canvas>
+            <canvas id="layer2P3" class="layers layer2"></canvas>
+            <canvas id="layer3P3" class="layers layer3"></canvas>
+            <canvas id="layer4P3" class="layers layer4"></canvas>
+            <canvas id="layer5P3" class="layers layer5"></canvas>
+            <canvas id="layer6P3" class="layers layer6"></canvas>
+            <canvas id="layer7P3" class="layers layer7"></canvas>
+        </div>
+    </section>
 
-        <!-- DAVINCI ENGINE -->
-        <script type="text/javascript" src="davinci/layers-post.js"></script>
-        <script type="text/javascript" src="davinci/random-colors.js"></script>
-        <script type="text/javascript" src="davinci/focus.js"></script>
-        <script type="text/javascript" src="davinci/davinci.js"></script>
-    </body>
-    </html>
+    <!-- STORY ARTBOARDS -->
+    <section class="artboards" id="stories">
+        <div class="artboard">
+            <canvas id="layer1S1" class="layers layer1"></canvas>
+            <canvas id="layer2S1" class="layers layer2"></canvas>
+            <canvas id="layer3S1" class="layers layer3"></canvas>
+            <canvas id="layer4S1" class="layers layer4"></canvas>
+            <canvas id="layer5S1" class="layers layer5"></canvas>
+            <canvas id="layer6S1" class="layers layer6"></canvas>
+            <canvas id="layer7S1" class="layers layer7"></canvas>
+        </div>
+
+        <div class="artboard">
+            <canvas id="layer1S2" class="layers layer1"></canvas>
+            <canvas id="layer2S2" class="layers layer2"></canvas>
+            <canvas id="layer3S2" class="layers layer3"></canvas>
+            <canvas id="layer4S2" class="layers layer4"></canvas>
+            <canvas id="layer5S2" class="layers layer5"></canvas>
+            <canvas id="layer6S2" class="layers layer6"></canvas>
+            <canvas id="layer7S2" class="layers layer7"></canvas>
+        </div>
+
+        <div class="artboard">
+            <canvas id="layer1S3" class="layers layer1"></canvas>
+            <canvas id="layer2S3" class="layers layer2"></canvas>
+            <canvas id="layer3S3" class="layers layer3"></canvas>
+            <canvas id="layer4S3" class="layers layer4"></canvas>
+            <canvas id="layer5S3" class="layers layer5"></canvas>
+            <canvas id="layer6S3" class="layers layer6"></canvas>
+            <canvas id="layer7S3" class="layers layer7"></canvas>
+        </div>
+    </section>
+
+    <!-- MODEL -->
+    <script type="text/javascript" src="models/diffusion/diffusion.js"></script>
+
+    <!-- DAVINCI ENGINE -->
+    <script type="text/javascript" src="davinci/layers.js"></script>
+    <script type="text/javascript" src="davinci/random-colors.js"></script>
+    <script type="text/javascript" src="davinci/focus.js"></script>
+    <script type="text/javascript" src="davinci/davinci.js"></script>
+</body>
+
+</html>
