@@ -3,9 +3,9 @@
 <p align="center">
 
 
-#CREDITS
-####FAVICON
+# CREDITS
+#### FAVICON
 <a href="https://www.flaticon.com/free-icons/alchemy" title="alchemy icons">Alchemy icons created by Freepik - Flaticon</a>
 
-####LOGO BASE
+#### LOGO BASE
 <a href="https://thenounproject.com/a.panasovsky/">Oleksandr Panasovskyi</a>

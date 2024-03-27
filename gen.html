@@ -2,11 +2,11 @@
 <html>
 
 <head>
-    <title>DɅVINCI</title>
+    <title>GEN OK.</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <link rel="icon" type="image/svg+xml" href="logo.svg">
+    <link rel="icon" type="image/svg+xml" href="alchimia/favicon.png">
     <link rel="stylesheet" href="ui.css">
 </head>
 
@@ -27,32 +27,14 @@
             <canvas id="layer6P1" class="layers layer6"></canvas>
             <canvas id="layer7P1" class="layers layer7"></canvas>
 
-            <div class="controls">
-                <button onclick="saveP1()">Salvar</button>
-            </div>
-            <script>
-               function saveP1(){
-                var canvas1 = document.getElementById("layer5P1");
-                    var canvas2 = document.getElementById("layer6P1");
-                    var canvas3 = document.getElementById("layer7P1");
-                    var canvasFull = document.createElement('canvas');
-                    var ctx = canvasFull.getContext('2d');
-                    canvasFull.width = canvas1.width;
-                    canvasFull.height = canvas1.height;
-
-                    ctx.drawImage(canvas3, 0, 0);
-                    ctx.drawImage(canvas1, 0, 0);
-                    ctx.drawImage(canvas2, 0, 0);
-
-                    var image = canvasFull.toDataURL("image/png");
-                    var link = document.createElement('a');
-                    link.download = 'canvas.png';
-                    link.href = image;
-                    link.click();
-               }
-
-
-            </script>
+            <ul class="controls">
+                <li>
+                    <button onclick="renderPost1()"><i class="ph-thin ph-image"></i></button>
+                </li>
+                <li>
+                    <button onclick="renderPostLayers1()"><i class="ph-thin ph-images"></i></button>
+                </li>
+            </ul>
         </div>
 
         <div class="artboard">
@@ -63,6 +45,15 @@
             <canvas id="layer5P2" class="layers layer5"></canvas>
             <canvas id="layer6P2" class="layers layer6"></canvas>
             <canvas id="layer7P2" class="layers layer7"></canvas>
+
+            <ul class="controls">
+                <li>
+                    <button onclick="renderPost2()"><i class="ph-thin ph-image"></i></button>
+                </li>
+                <li>
+                    <button onclick="renderPostLayers2()"><i class="ph-thin ph-images"></i></button>
+                </li>
+            </ul>
         </div>
 
         <div class="artboard">
@@ -73,6 +64,15 @@
             <canvas id="layer5P3" class="layers layer5"></canvas>
             <canvas id="layer6P3" class="layers layer6"></canvas>
             <canvas id="layer7P3" class="layers layer7"></canvas>
+
+            <ul class="controls">
+                <li>
+                    <button onclick="renderPost3()"><i class="ph-thin ph-image"></i></button>
+                </li>
+                <li>
+                    <button onclick="renderPostLayers3()"><i class="ph-thin ph-images"></i></button>
+                </li>
+            </ul>
         </div>
     </section>
 
@@ -86,6 +86,15 @@
             <canvas id="layer5S1" class="layers layer5"></canvas>
             <canvas id="layer6S1" class="layers layer6"></canvas>
             <canvas id="layer7S1" class="layers layer7"></canvas>
+
+            <ul class="controls">
+                <li>
+                    <button onclick="renderStory1()"><i class="ph-thin ph-image"></i></button>
+                </li>
+                <li>
+                    <button onclick="renderStoryLayers1()"><i class="ph-thin ph-images"></i></button>
+                </li>
+            </ul>
         </div>
 
         <div class="artboard">
@@ -96,6 +105,15 @@
             <canvas id="layer5S2" class="layers layer5"></canvas>
             <canvas id="layer6S2" class="layers layer6"></canvas>
             <canvas id="layer7S2" class="layers layer7"></canvas>
+
+            <ul class="controls">
+                <li>
+                    <button onclick="renderStory2()"><i class="ph-thin ph-image"></i></button>
+                </li>
+                <li>
+                    <button onclick="renderStoryLayers2()"><i class="ph-thin ph-images"></i></button>
+                </li>
+            </ul>
         </div>
 
         <div class="artboard">
@@ -106,6 +124,15 @@
             <canvas id="layer5S3" class="layers layer5"></canvas>
             <canvas id="layer6S3" class="layers layer6"></canvas>
             <canvas id="layer7S3" class="layers layer7"></canvas>
+
+            <ul class="controls">
+                <li>
+                    <button onclick="renderStory3()"><i class="ph-thin ph-image"></i></button>
+                </li>
+                <li>
+                    <button onclick="renderStoryLayers3()"><i class="ph-thin ph-images"></i></button>
+                </li>
+            </ul>
         </div>
     </section>
 
@@ -113,10 +140,12 @@
     <script type="text/javascript" src="models/diffusion/diffusion.js"></script>
 
     <!-- DAVINCI ENGINE -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script type="text/javascript" src="davinci/layers.js"></script>
-    <script type="text/javascript" src="davinci/random-colors.js"></script>
     <script type="text/javascript" src="davinci/focus.js"></script>
     <script type="text/javascript" src="davinci/davinci.js"></script>
+    <script type="text/javascript" src="davinci/random-colors.js"></script>
+    <script type="text/javascript" src="davinci/render.js"></script>
 </body>
 
 </html>

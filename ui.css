@@ -57,7 +57,7 @@ input {
     padding-left: 20px !important;
 }
 
-button {
+.btn {
     font-family: "Montserrat", sans-serif;
     background-color: var(--secondary);
     color: aliceblue;
@@ -69,9 +69,13 @@ button {
     font-weight: 500;
     font-size: 14px;
 }
-button:hover{
+.btn:hover{
     color: var(--secondary);
     background-color: var(--alt);
+}
+
+hr{
+    border-bottom: 1px solid var(--alt) !important;
 }
 
 .clear20x{ height: 20px; }
@@ -186,6 +190,25 @@ TOOLS
     width: 10%;
     height: 100vh;
 }
+.controls{
+    display: flex;
+    margin-top: 10px;
+}
+.controls li{
+    padding-right: 5px;
+}
+.controls button{
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--primary);
+    color: aliceblue;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    border-radius: 10px;
+    font-weight: 300;
+    font-size: 22px;
+}
 
 /*********************************************
 
@@ -244,9 +267,7 @@ ARTBOARDS
     z-index: 1;
 }
 
-.controls{
-    margin-top: 10px;
-}
+
 
 .imagine {
     border: 2px solid var(--primary);

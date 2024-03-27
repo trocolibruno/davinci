@@ -1,24 +1,44 @@
 ////////////////////////////////////////////////
 
+// CREATE COLORS
+
+///////////////////////////////////////////////
+var selectedColor1 = localStorage.getItem('color1');
+var selectedColor2 = localStorage.getItem('color2');
+var selectedColor3 = localStorage.getItem('color3');
+
+////////////////////////////////////////////////
+
 // CREATE DETAILS
 
 ///////////////////////////////////////////////
-details = 101;
-detailsFolder = "models/diffusion/diffusion-svg/";
 
-genD1P1 = Math.floor(Math.random() * details);
-genD2P1 = Math.floor(Math.random() * details);
-genD1P2 = Math.floor(Math.random() * details);
-genD2P2 = Math.floor(Math.random() * details);
-genD1P3 = Math.floor(Math.random() * details);
-genD2P3 = Math.floor(Math.random() * details);
+aiDetails = 100;
+aiDetailsFolder = "models/diffusion/diffusion-svg/";
+aiDetail1_P1 = Math.ceil(Math.random() * aiDetails);
+aiDetail2_P1 = Math.ceil(Math.random() * aiDetails);
+aiDetail1_P2 = Math.ceil(Math.random() * aiDetails);
+aiDetail2_P2 = Math.ceil(Math.random() * aiDetails);
+aiDetail1_P3 = Math.ceil(Math.random() * aiDetails);
+aiDetail2_P3 = Math.ceil(Math.random() * aiDetails);
 
 ////////////////////////////////////////////////
 
 // CREATE BACKGROUND IMAGE
 
 ///////////////////////////////////////////////
+
 blendMode = "multiply";
+
+aiBackgrounds = 11;
+aiBackgroundsFolder = "models/diffusion/diffusion-jpg/";
+aiBackgroundPost1 = Math.ceil(Math.random() * aiBackgrounds);
+aiBackgroundPost2 = Math.ceil(Math.random() * aiBackgrounds);
+aiBackgroundPost3 = Math.ceil(Math.random() * aiBackgrounds);
+console.log(aiBackgroundPost1);
+console.log(aiBackgroundPost2);
+console.log(aiBackgroundPost3);
+
 
 ////////////////////////////////////////////////
 
@@ -76,11 +96,11 @@ function parseGradientString(gradientString) {
   var gradientTypes = [gradientType1, gradientType2, gradientType3, gradientType4, gradientType5, gradientType6, gradientType7, gradientType8, gradientType9, gradientType10, gradientType11, gradientType12, gradientType13, gradientType14, gradientType15, gradientType16, gradientType17, gradientType18, gradientType19, gradientType20, gradientType21, gradientType22, gradientType23, gradientType24, gradientType25, gradientType26, gradientType27, gradientType28, gradientType29, gradientType30, gradientType31, gradientType32, gradientType33, gradientType34, gradientType35, gradientType36, gradientType37, gradientType38, gradientType39, gradientType40];
   
   function parseGradientString(gradientArray) {
-    var randomIndex = Math.floor(Math.random() * gradientArray.length);
+    var randomIndex = Math.ceil(Math.random() * gradientArray.length);
     return gradientArray[randomIndex].split(',').map(Number);
   }
-  var gradientType1 = parseGradientString(gradientTypes);
-  var gradientType2 = parseGradientString(gradientTypes);
-  var gradientType3 = parseGradientString(gradientTypes);
+  var aiGradient1 = parseGradientString(gradientTypes);
+  var aiGradient2 = parseGradientString(gradientTypes);
+  var aiGradient3 = parseGradientString(gradientTypes);
 
 

@@ -8,11 +8,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="icon" type="image/svg+xml" href="alchimia/favicon.png">
     <link rel="stylesheet" href="ui.css">
+
+    <!-- coloris-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.js"></script>
+    <script type="text/javascript">
+        Coloris({
+            themeMode: 'dark',
+            alpha: false
+        });
+    </script>
 </head>
 
 <body>
     <style>
-        .alert{
+        .alert {
             background-color: black;
             color: white;
             width: 100%;
@@ -23,8 +33,11 @@
             font-family: Arial, Helvetica, sans-serif;
             display: none;
         }
+
         @media screen and (orientation: portrait) {
-        .alert{ display: block;}
+            .alert {
+                display: block;
+            }
         }
     </style>
     <div class="alert">
@@ -45,7 +58,7 @@
             <h1>Vamos criar?</h1>
             <strong>Escolha 3 cores que você gosta</strong>
 
-            <hr>
+            <div class="clear20x"></div>
 
             <form id="create">
                 <ul>
@@ -60,7 +73,8 @@
 
         <div class="create-content1">
             <div class="create-content-box">
-                <strong>DAVINCI V0.5</strong>
+                <strong>DAVINCI v0.6</strong>
+                <hr>
                 <p>
                     DaVinci é o estado da arte na criação de artes generativas. Sem pensar muito,
                     você pode criar posts e stories rapidamente usando seu navegador.
@@ -72,8 +86,8 @@
                 </p>
                 <div class="clear20x"></div>
                 <p>
-                    Caso você seja desenvolvedor, você tem acesso livre ao código fonte, 
-                    completamente documentado, você pode treinar DaVinci para fazer artes 
+                    Caso você seja desenvolvedor, você tem acesso livre ao código fonte,
+                    completamente documentado, você pode treinar DaVinci para fazer artes
                     usando os elementos que você mesmo criar.
                 </p>
             </div>
@@ -86,10 +100,26 @@
     <!-- scripts -->
     <script type="text/javascript" src="alchimia/alchimia.js"></script>
     <script type="text/javascript">
-        document.getElementById("create").addEventListener("submit", function (event) {
-            event.preventDefault();
-            window.location.href = "gen.html";
+        document.addEventListener('DOMContentLoaded', function () {
+            var form = document.getElementById('create');
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                var inputs = form.querySelectorAll('input[data-coloris]');
+                var color1 = inputs[0].value;
+                var color2 = inputs[1].value;
+                var color3 = inputs[2].value;
+
+                // Salvar os dados no localStorage
+                localStorage.setItem('color1', color1);
+                localStorage.setItem('color2', color2);
+                localStorage.setItem('color3', color3);
+
+                window.location.href = "gen.html";
+            });
         });
+
     </script>
 </body>
 
