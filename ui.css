@@ -67,9 +67,14 @@ button {
     letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 14px;
+}
+button:hover{
+    color: var(--secondary);
+    background-color: var(--alt);
 }
 
+.clear20x{ height: 20px; }
 
 /*********************************************
 
@@ -90,6 +95,7 @@ INDEX
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+    padding-bottom: 70px;
 }
 
 .create-content1,
@@ -99,14 +105,18 @@ INDEX
 }
 
 .create-content-box {
-    background-color: #f2f2f2;
+    border: 1px solid var(--alt);
+    border-bottom: 5px solid var(--secondary);
     border-radius: 20px;
     padding: 30px;
 }
 
 .create-content-box p {
     font-family: "Montserrat", sans-serif;
-    color: var(--primary);
+    color: black;
+    font-weight: 500;
+    text-align: justify;
+    font-size: 14px;
 }
 
 .create-content2 h1 {
@@ -116,6 +126,7 @@ INDEX
     line-height: .9;
 }
 
+.create-content1,
 .create-content2 strong {
     font-family: "Montserrat", sans-serif;
     color: var(--secondary);
@@ -141,6 +152,26 @@ INDEX
 
 .clr-field button {
     width: 100px !important;
+}
+
+nav{
+    position: fixed;
+    width: 100%;
+    top: 30px;
+    right: 10px;
+    text-align: right;
+}
+nav a{
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--primary);
+    width: 150px;
+    height: 50px;
+    color: aliceblue;
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 /*********************************************

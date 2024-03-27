@@ -6,37 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <link rel="icon" type="image/svg+xml" href="logo.svg">
+    <link rel="icon" type="image/svg+xml" href="alchimia/favicon.png">
     <link rel="stylesheet" href="ui.css">
-
-    <!-- coloris-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.css" />
-    <script src="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.js"></script>
-    <script type="text/javascript">
-        Coloris({
-            themeMode: 'dark',
-            alpha: false
-        });
-    </script>
 </head>
 
 <body>
+    <style>
+        .alert{
+            background-color: black;
+            color: white;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            z-index: 99;
+            padding: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            display: none;
+        }
+        @media screen and (orientation: portrait) {
+        .alert{ display: block;}
+        }
+    </style>
+    <div class="alert">
+        Por favor use em um Desktop, versão de celular em desenvolvimento. Em breve concluída.
+    </div>
+
     <section class="logo">
-        <img src="logo.svg">
+        <img src="davinci/logo.svg">
     </section>
 
-    <section class="create">
-        <div class="create-content1">
-            <div class="create-content-box">
-                <p>
-                    DaVinci é o estado da arte na criação de artes generativas. Sem pensar muito,
-                    você pode criar posts e stories rapidamente usando seu navegador.
-                </p>
-                <p>
+    <nav>
+        <a href="#partners">PATROCÍNIOS</a>
+    </nav>
 
-                </p>
-            </div>
-        </div>
+    <section class="create">
+
         <div class="create-content2">
             <h1>Vamos criar?</h1>
             <strong>Escolha 3 cores que você gosta</strong>
@@ -53,9 +57,34 @@
                 <button type="submit">Criar</button>
             </form>
         </div>
+
+        <div class="create-content1">
+            <div class="create-content-box">
+                <strong>DAVINCI V0.5</strong>
+                <p>
+                    DaVinci é o estado da arte na criação de artes generativas. Sem pensar muito,
+                    você pode criar posts e stories rapidamente usando seu navegador.
+                </p>
+                <div class="clear20x"></div>
+                <p>
+                    O processo é bem simples, basta escolher 3 cores para que DaVinci faça a combinação
+                    incrível para você. DaVinci é constantemente atualizado.
+                </p>
+                <div class="clear20x"></div>
+                <p>
+                    Caso você seja desenvolvedor, você tem acesso livre ao código fonte, 
+                    completamente documentado, você pode treinar DaVinci para fazer artes 
+                    usando os elementos que você mesmo criar.
+                </p>
+            </div>
+        </div>
     </section>
 
+    <!-- Alchimia Apps -->
+    <div magica="alchimia/partners.html" id="partners"></div>
+
     <!-- scripts -->
+    <script type="text/javascript" src="alchimia/alchimia.js"></script>
     <script type="text/javascript">
         document.getElementById("create").addEventListener("submit", function (event) {
             event.preventDefault();
