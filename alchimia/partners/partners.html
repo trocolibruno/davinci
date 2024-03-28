@@ -9,6 +9,13 @@
         padding-bottom: 60px;
     }
 
+    .partners-content {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+
     .partners h1 {
         font-family: "Playfair Display", serif;
         font-size: 70px;
@@ -24,25 +31,45 @@
     }
 
     .partners ul {
-        padding-top: 20px;
+        padding-top: 30px;
+        padding-bottom: 30px;
         display: inline-flex;
     }
 </style>
 
 <!-- user interface -->
 <section class="partners">
-    <h1>Partners</h1>
-    <h2>
-        Empresas que ajudam esse projeto altamente ambicioso.
-        <br>Focado em humanos, sempre Open Source e altamente escalável e acessível.
-    </h2>
-    <ul>
-        <li>
-            <img src="alchimia/partners/partner-1.png">
-        </li>
+    <div class="partners-content">
+        <h1>Partners</h1>
+        <h2>
+            Empresas que ajudam esse projeto altamente ambicioso.
+            <br>Focado em humanos, sempre Open Source e altamente escalável e acessível.
+        </h2>
+        <ul>
+            <li>
+                <img src="alchimia/partners/partner-1.png">
+            </li>
 
-        <li>
-            <img src="alchimia/partners/partner-2.png">
-        </li>
-    </ul>
+            <li>
+                <img src="alchimia/partners/partner-2.png">
+            </li>
+        </ul>
+
+        <button onclick="openModal()" class="btn">Quero Apoiar</button>
+    </div>
 </section>
+
+<div id="alchimia" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Entre em contato no WhatsApp:
+            <a href="https://wa.me/11993194165" target="_blank">+55 11 99319 4165</a>
+        </p>
+    </div>
+</div>
+<script>
+    modal();
+    function openModal() {
+        $("#alchimia").show();
+    }
+</script>

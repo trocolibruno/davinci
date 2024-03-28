@@ -9,6 +9,9 @@
     <link rel="icon" type="image/svg+xml" href="alchimia/favicon.png">
     <link rel="stylesheet" href="alchimia/alchimia.css">
     <link rel="stylesheet" href="davinci/ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script type="text/javascript" src="alchimia/alchimia.js"></script>
 
     <!-- coloris-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.css" />
@@ -45,6 +48,14 @@
         Por favor use em um Desktop, versão de celular em desenvolvimento. Em breve concluída.
     </div>
 
+        <!-- LOADING -->
+        <div id="loading">
+            <div class="lds-ripple">
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
     <section class="logo">
         <img src="davinci/logo.svg">
     </section>
@@ -74,7 +85,7 @@
 
         <div class="create-content1">
             <div class="create-content-box">
-                <strong>DAVINCI v0.7</strong>
+                <strong>DAVINCI v0.8</strong>
                 <hr>
                 <p>
                     DaVinci é o estado da arte na criação de artes generativas. Sem pensar muito,
@@ -95,42 +106,16 @@
         </div>
     </section>
 
-    <button id="openModalBtn">Open Modal</button>
-
-<div id="myModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p>This is a modal!</p>
-  </div>
-</div>
-
-    <!-- Alchimia Apps -->
-    <div magica="alchimia/partners/partners.html" id="partners"></div>
-
-    <!-- scripts -->
-    <script type="text/javascript" src="alchimia/alchimia.js"></script>
-    <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded', function () {
-            var form = document.getElementById('create');
-
-            form.addEventListener('submit', function (e) {
-                e.preventDefault();
-
-                var inputs = form.querySelectorAll('input[data-coloris]');
-                var color1 = inputs[0].value;
-                var color2 = inputs[1].value;
-                var color3 = inputs[2].value;
-
-                // Salvar os dados no localStorage
-                localStorage.setItem('color1', color1);
-                localStorage.setItem('color2', color2);
-                localStorage.setItem('color3', color3);
-
-                window.location.href = "gen.html";
-            });
+    <!-- import alchimia templates -->
+    <script>
+        $(document).ready(function () {
+            $("#partners").load("alchimia/partners/partners.html");
         });
-
     </script>
+    <div id="partners"></div>
+
+    <!-- tutorial -->
+    <script type="text/javascript" src="davinci/tutorial.js"></script>
 </body>
 
 </html>

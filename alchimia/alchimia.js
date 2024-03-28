@@ -1,78 +1,52 @@
-// Include HTML
-function alchimia() {
-  var z, i, elmnt, file, xhttp;
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    file = elmnt.getAttribute("magica");
-    if (file) {
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function () {
-        if (this.readyState == 4) {
-          if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-          if (this.status == 404) { elmnt.innerHTML = "Template not found."; }
-          elmnt.removeAttribute("magica");
-          includeHTML();
-        }
-      }
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      return;
-    }
-  }
-}
-alchimia();
+////////////////////////////////////////////////
 
-// Autoscroll
-document.addEventListener('DOMContentLoaded', function() {
-  var links = document.querySelectorAll('a[href^="#"]');
-  links.forEach(function(link) {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      var targetId = this.hash.substring(1);
-      var targetElement = document.getElementById(targetId);
-      if (!targetElement) return;
+// LOADING
 
-      var targetOffset = targetElement.offsetTop;
-      var initialScroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+///////////////////////////////////////////////
 
-      var duration = 500;
-      var startTime = null;
-
-      function scrollToTarget(timestamp) {
-        if (!startTime) startTime = timestamp;
-        var progress = timestamp - startTime;
-        var percentage = progress / duration;
-        var easing = function(t) { return t * t }; // de https://easings.net/#easeInQuad
-        var easePercentage = easing(Math.min(percentage, 1));
-
-        window.scrollTo(0, initialScroll + easePercentage * (targetOffset - initialScroll));
-
-        if (progress < duration) {
-          window.requestAnimationFrame(scrollToTarget);
-        } else {
-          window.location.hash = targetId;
-        }
-      }
-
-      window.requestAnimationFrame(scrollToTarget);
+$(window).on('load', function () {
+  $(".lds-ripple").fadeOut(function () {
+    $('#loading').slideToggle(500, function () {
+      
     });
   });
 });
 
+////////////////////////////////////////////////
 
-// Modal
-document.getElementById('openModalBtn').addEventListener('click', function() {
-  document.getElementById('myModal').style.display = 'block';
+// JQuery Autoscroll
+
+///////////////////////////////////////////////
+
+var velocity = 600;
+jQuery(document).ready(function ($) {
+  $('a[href^="#"]').bind('click.smoothscroll', function (e) {
+    e.preventDefault();
+    var target = this.hash,
+      $target = $(target);
+
+    $('html, body').stop().animate({
+      'scrollTop': $target.offset().top - 45
+    }, velocity, function () {
+      window.location.hash = target;
+    });
+  });
 });
 
-document.querySelector('.close').addEventListener('click', function() {
-  document.getElementById('myModal').style.display = 'none';
-});
+////////////////////////////////////////////////
 
-window.addEventListener('click', function(event) {
-  if (event.target == document.getElementById('myModal')) {
-    document.getElementById('myModal').style.display = 'none';
-  }
-});
+// JQuery Modal
+
+///////////////////////////////////////////////
+
+function modal() {
+  document.querySelector('.close').addEventListener('click', function () {
+    $(".modal").hide();
+  });
+  window.addEventListener('click', function (event) {
+    if (event.target.classList.contains('modal')) {
+      $(".modal").hide();
+    }
+  });
+}
 

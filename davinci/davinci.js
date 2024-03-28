@@ -94,20 +94,6 @@ function genPG(layerType, gradientType, gradientStart, gradientEnd) {
 
 ////////////////////////////////////////////////
 
-// LOADING
-
-///////////////////////////////////////////////
-
-$(window).on('load', function () {
-  $(".lds-ripple").fadeOut(function () {
-    $('#loading').slideToggle(500, function () {
-      
-    });
-  });
-});
-
-////////////////////////////////////////////////
-
 // TOOLS
 
 ///////////////////////////////////////////////
