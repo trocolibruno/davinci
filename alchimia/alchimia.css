@@ -1,0 +1,87 @@
+/*********************************************
+
+FONTS
+
+*********************************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+.primary-font {
+    font-family: "Montserrat", sans-serif;
+}
+
+.secondary-font {
+    font-family: "Playfair Display", serif;
+}
+
+/*********************************************
+
+COLORS
+
+*********************************************/
+
+:root {
+    --primary: #4e4e4e;
+    --secondary: #F48072;
+    --alt: #CCCCCC;
+}
+
+::selection {
+    background: var(--primary);
+}
+
+::-moz-selection {
+    background: var(--primary);
+}
+
+.primary-color {
+    color: var(--primary) !important;
+}
+
+.secondary-color {
+    color: var(--secondary) !important;
+}
+
+.alt-color {
+    color: var(--alt) !important;
+}
+
+/*********************************************
+
+MODAL
+
+*********************************************/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -58,9 +58,9 @@ function genPD(layer, postNumber, detailNumber, posX, posY, detailColor, detailO
 
 ///////////////////////////////////////////////
 
-// genPB(1, aiBackgroundPost1, backgroundP1);
-// genPB(2, aiBackgroundPost2, backgroundP2);
-// genPB(3, aiBackgroundPost3, backgroundP3);
+genPB(1, aiBackgroundPost1, backgroundP1);
+genPB(2, aiBackgroundPost2, backgroundP2);
+genPB(3, aiBackgroundPost3, backgroundP3);
 
 function genPB(id, backgroundNumber, layerType) {
   var image = new Image();
@@ -91,3 +91,35 @@ function genPG(layerType, gradientType, gradientStart, gradientEnd) {
   layerType.fillStyle = gradient;
   layerType.fillRect(0, 0, postCanvasX, postCanvasY);
 }
+
+////////////////////////////////////////////////
+
+// LOADING
+
+///////////////////////////////////////////////
+
+$(window).on('load', function () {
+  $(".lds-ripple").fadeOut(function () {
+    $('#loading').slideToggle(500, function () {
+      
+    });
+  });
+});
+
+////////////////////////////////////////////////
+
+// TOOLS
+
+///////////////////////////////////////////////
+
+function imagine() {
+  $('#loading').slideToggle(500, function () {
+    location.reload(true);
+  });
+}
+$(document).keydown(function (e) {
+  if (e.which === 13) {
+    imagine();
+  }
+});
+

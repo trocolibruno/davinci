@@ -10,7 +10,7 @@ function alchimia() {
       xhttp.onreadystatechange = function () {
         if (this.readyState == 4) {
           if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-          if (this.status == 404) { elmnt.innerHTML = "App not found."; }
+          if (this.status == 404) { elmnt.innerHTML = "Template not found."; }
           elmnt.removeAttribute("magica");
           includeHTML();
         }
@@ -58,5 +58,21 @@ document.addEventListener('DOMContentLoaded', function() {
       window.requestAnimationFrame(scrollToTarget);
     });
   });
+});
+
+
+// Modal
+document.getElementById('openModalBtn').addEventListener('click', function() {
+  document.getElementById('myModal').style.display = 'block';
+});
+
+document.querySelector('.close').addEventListener('click', function() {
+  document.getElementById('myModal').style.display = 'none';
+});
+
+window.addEventListener('click', function(event) {
+  if (event.target == document.getElementById('myModal')) {
+    document.getElementById('myModal').style.display = 'none';
+  }
 });
 

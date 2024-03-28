@@ -2,15 +2,24 @@
 <html>
 
 <head>
-    <title>GEN OK.</title>
+    <title>Generative Images</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="icon" type="image/svg+xml" href="alchimia/favicon.png">
-    <link rel="stylesheet" href="ui.css">
+    <link rel="stylesheet" href="alchimia/alchimia.css">
+    <link rel="stylesheet" href="davinci/ui.css">
 </head>
 
 <body>
+    <!-- LOADING -->
+    <div id="loading">
+        <div class="lds-ripple">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
     <!-- TOOLS -->
     <section class="tools">
 
@@ -140,6 +149,7 @@
     <script type="text/javascript" src="models/diffusion/diffusion.js"></script>
 
     <!-- DAVINCI ENGINE -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script type="text/javascript" src="davinci/layers.js"></script>
     <script type="text/javascript" src="davinci/focus.js"></script>

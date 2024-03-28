@@ -7,7 +7,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="icon" type="image/svg+xml" href="alchimia/favicon.png">
-    <link rel="stylesheet" href="ui.css">
+    <link rel="stylesheet" href="alchimia/alchimia.css">
+    <link rel="stylesheet" href="davinci/ui.css">
 
     <!-- coloris-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.css" />
@@ -67,13 +68,13 @@
                     <li><input type="text" data-coloris value="#000000"></li>
                 </ul>
 
-                <button type="submit">Criar</button>
+                <button type="submit" class="btn">Criar</button>
             </form>
         </div>
 
         <div class="create-content1">
             <div class="create-content-box">
-                <strong>DAVINCI v0.6</strong>
+                <strong>DAVINCI v0.7</strong>
                 <hr>
                 <p>
                     DaVinci é o estado da arte na criação de artes generativas. Sem pensar muito,
@@ -94,8 +95,17 @@
         </div>
     </section>
 
+    <button id="openModalBtn">Open Modal</button>
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>This is a modal!</p>
+  </div>
+</div>
+
     <!-- Alchimia Apps -->
-    <div magica="alchimia/partners.html" id="partners"></div>
+    <div magica="alchimia/partners/partners.html" id="partners"></div>
 
     <!-- scripts -->
     <script type="text/javascript" src="alchimia/alchimia.js"></script>
