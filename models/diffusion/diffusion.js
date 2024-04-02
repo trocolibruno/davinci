@@ -60,7 +60,7 @@ aiDetail2_P3_PosY = Math.floor(Math.random() * 1601) - 800;
 
 blendMode = "multiply";
 
-aiBackgrounds = 11;
+aiBackgrounds = 111;
 aiBackgroundsFolder = "models/diffusion/diffusion-jpg/";
 aiBackgroundPost1 = Math.ceil(Math.random() * aiBackgrounds);
 aiBackgroundPost2 = Math.ceil(Math.random() * aiBackgrounds);
