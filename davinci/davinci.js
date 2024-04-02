@@ -27,14 +27,16 @@ function shuffleArray(array) {
 
 ///////////////////////////////////////////////
 
-genPD(5, 'P1', aiDetail1_P1, 289, -480, aiColor[0], "1");
-genPD(6, 'P1', aiDetail2_P1, -289, 400, aiColor[1], "1");
-genPD(5, 'P2', aiDetail1_P2, 289, -480, aiColor[2], "1");
-genPD(6, 'P2', aiDetail2_P2, -289, 400, aiColor[3], "1");
-genPD(5, 'P3', aiDetail1_P3, 289, -480, aiColor[4], "1");
-genPD(6, 'P3', aiDetail2_P3, -289, 400, aiColor[5], "1");
+genPD(5, 'P1', aiDetail1_P1, aiDetail1_P1_PosX, aiDetail1_P1_PosY, aiColor[0], "1");
+genPD(6, 'P1', aiDetail2_P1, aiDetail2_P1_PosX, aiDetail1_P2_PosY, aiColor[1], "1");
 
-function genPD(layer, postNumber, detailNumber, posX, posY, detailColor, detailOpacity) {
+genPD(5, 'P2', aiDetail1_P2, aiDetail1_P2_PosX, aiDetail1_P2_PosY, aiColor[2], "1");
+genPD(6, 'P2', aiDetail2_P2, aiDetail2_P2_PosX, aiDetail2_P2_PosY, aiColor[3], "1");
+
+genPD(5, 'P3', aiDetail1_P3, aiDetail1_P3_PosX, aiDetail1_P3_PosY, aiColor[4], "1");
+genPD(6, 'P3', aiDetail2_P3, aiDetail2_P3_PosX, aiDetail2_P3_PosY, aiColor[5], "1");
+
+function genPD(layer, postNumber, detailNumber, detailPosX, detailPosY, detailColor, detailOpacity) {
   var artboardLayer = "layer" + layer + postNumber;
   var detail = new Image();
   detail.src = aiDetailsFolder + detailNumber + ".svg";
@@ -42,7 +44,7 @@ function genPD(layer, postNumber, detailNumber, posX, posY, detailColor, detailO
   detail.onload = function () {
     var canvas = document.getElementById(artboardLayer);
     var genD = canvas.getContext('2d');
-    genD.drawImage(detail, posX, posY);
+    genD.drawImage(detail, detailPosX, detailPosY);
     genD.globalAlpha = detailOpacity;
 
     var redrawVector = canvas.getContext('2d');

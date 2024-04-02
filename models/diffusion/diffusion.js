@@ -9,18 +9,48 @@ var selectedColor3 = localStorage.getItem('color3');
 
 ////////////////////////////////////////////////
 
-// CREATE DETAILS
+// DETAILS CONFIGURATIONS
 
 ///////////////////////////////////////////////
 
 aiDetails = 100;
 aiDetailsFolder = "models/diffusion/diffusion-svg/";
+
+////////////////////////////////////////////////
+
+// CREATE DETAIL 1
+
+///////////////////////////////////////////////
+
 aiDetail1_P1 = Math.ceil(Math.random() * aiDetails);
-aiDetail2_P1 = Math.ceil(Math.random() * aiDetails);
 aiDetail1_P2 = Math.ceil(Math.random() * aiDetails);
-aiDetail2_P2 = Math.ceil(Math.random() * aiDetails);
 aiDetail1_P3 = Math.ceil(Math.random() * aiDetails);
+
+aiDetail1_P1_PosX = Math.floor(Math.random() * 1601) - 800;
+aiDetail1_P2_PosX = Math.floor(Math.random() * 1601) - 800;
+aiDetail1_P3_PosX = Math.floor(Math.random() * 1601) - 800;
+
+aiDetail1_P1_PosY = Math.floor(Math.random() * 1601) - 800;
+aiDetail1_P2_PosY = Math.floor(Math.random() * 1601) - 800;
+aiDetail1_P3_PosY = Math.floor(Math.random() * 1601) - 800;
+
+////////////////////////////////////////////////
+
+// CREATE DETAIL 2
+
+///////////////////////////////////////////////
+
+aiDetail2_P1 = Math.ceil(Math.random() * aiDetails);
+aiDetail2_P2 = Math.ceil(Math.random() * aiDetails);
 aiDetail2_P3 = Math.ceil(Math.random() * aiDetails);
+
+aiDetail2_P1_PosX = Math.floor(Math.random() * 1601) - 800;
+aiDetail2_P2_PosX = Math.floor(Math.random() * 1601) - 800;
+aiDetail2_P3_PosX = Math.floor(Math.random() * 1601) - 800;
+
+aiDetail2_P1_PosY = Math.floor(Math.random() * 1601) - 800;
+aiDetail2_P2_PosY = Math.floor(Math.random() * 1601) - 800;
+aiDetail2_P3_PosY = Math.floor(Math.random() * 1601) - 800;
 
 ////////////////////////////////////////////////
 
@@ -35,10 +65,6 @@ aiBackgroundsFolder = "models/diffusion/diffusion-jpg/";
 aiBackgroundPost1 = Math.ceil(Math.random() * aiBackgrounds);
 aiBackgroundPost2 = Math.ceil(Math.random() * aiBackgrounds);
 aiBackgroundPost3 = Math.ceil(Math.random() * aiBackgrounds);
-console.log(aiBackgroundPost1);
-console.log(aiBackgroundPost2);
-console.log(aiBackgroundPost3);
-
 
 ////////////////////////////////////////////////
 
