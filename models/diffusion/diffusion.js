@@ -34,6 +34,10 @@ aiDetail1_P1_PosY = Math.floor(Math.random() * 1601) - 800;
 aiDetail1_P2_PosY = Math.floor(Math.random() * 1601) - 800;
 aiDetail1_P3_PosY = Math.floor(Math.random() * 1601) - 800;
 
+aiDetail1_P1_Alpha = Math.random() * (1 - 0.1) + 0.1;
+aiDetail1_P2_Alpha = Math.random() * (1 - 0.1) + 0.1;
+aiDetail1_P3_Alpha = Math.random() * (1 - 0.1) + 0.1;
+
 ////////////////////////////////////////////////
 
 // CREATE DETAIL 2
@@ -58,7 +62,18 @@ aiDetail2_P3_PosY = Math.floor(Math.random() * 1601) - 800;
 
 ///////////////////////////////////////////////
 
-blendMode = "multiply";
+/* globalCompositeOperation :
+  normal | multiply | screen | overlay | 
+  darken | lighten | color-dodge | color-burn | hard-light | 
+  soft-light | difference | exclusion | hue | saturation | 
+  color | luminosity
+*/
+const blendModes = ["screen", "multiply", "overlay", "darken", "lighten", "color", "color-burn"];
+function randomBlendMode() {
+  const randomIndex = Math.floor(Math.random() * blendModes.length);
+  return blendModes[randomIndex];
+}
+blendMode = randomBlendMode();
 
 aiBackgrounds = 111;
 aiBackgroundsFolder = "models/diffusion/diffusion-jpg/";

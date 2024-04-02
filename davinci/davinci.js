@@ -27,13 +27,13 @@ function shuffleArray(array) {
 
 ///////////////////////////////////////////////
 
-genPD(5, 'P1', aiDetail1_P1, aiDetail1_P1_PosX, aiDetail1_P1_PosY, aiColor[0], "1");
+genPD(5, 'P1', aiDetail1_P1, aiDetail1_P1_PosX, aiDetail1_P1_PosY, aiColor[0], aiDetail1_P1_Alpha);
 genPD(6, 'P1', aiDetail2_P1, aiDetail2_P1_PosX, aiDetail1_P2_PosY, aiColor[1], "1");
 
-genPD(5, 'P2', aiDetail1_P2, aiDetail1_P2_PosX, aiDetail1_P2_PosY, aiColor[2], "1");
+genPD(5, 'P2', aiDetail1_P2, aiDetail1_P2_PosX, aiDetail1_P2_PosY, aiColor[2], aiDetail1_P2_Alpha);
 genPD(6, 'P2', aiDetail2_P2, aiDetail2_P2_PosX, aiDetail2_P2_PosY, aiColor[3], "1");
 
-genPD(5, 'P3', aiDetail1_P3, aiDetail1_P3_PosX, aiDetail1_P3_PosY, aiColor[4], "1");
+genPD(5, 'P3', aiDetail1_P3, aiDetail1_P3_PosX, aiDetail1_P3_PosY, aiColor[4], aiDetail1_P3_Alpha);
 genPD(6, 'P3', aiDetail2_P3, aiDetail2_P3_PosX, aiDetail2_P3_PosY, aiColor[5], "1");
 
 function genPD(layer, postNumber, detailNumber, detailPosX, detailPosY, detailColor, detailOpacity) {
@@ -69,7 +69,7 @@ function genPB(id, backgroundNumber, layerType) {
   image.src = aiBackgroundsFolder + backgroundNumber + ".jpg";
 
   image.onload = function () {
-    layerType.globalCompositeOperation = "blendMode";
+    layerType.globalCompositeOperation = blendMode;
     layerType.globalAlpha = 0.6;
     layerType.drawImage(image, 0, 0);
     layerType.globalCompositeOperation = 'destination-over';

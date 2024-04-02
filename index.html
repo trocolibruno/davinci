@@ -48,13 +48,13 @@
         Por favor use em um Desktop, versão de celular em desenvolvimento. Em breve concluída.
     </div>
 
-        <!-- LOADING -->
-        <div id="loading">
-            <div class="lds-ripple">
-                <div></div>
-                <div></div>
-            </div>
+    <!-- LOADING -->
+    <div id="loading" class="loading-dark">
+        <div class="lds-ripple">
+            <div></div>
+            <div></div>
         </div>
+    </div>
 
     <section class="logo">
         <img src="davinci/logo.svg">
@@ -67,40 +67,54 @@
     <section class="create">
 
         <div class="create-content2">
-            <h1>Vamos criar?</h1>
-            <strong>Escolha 3 cores que você gosta</strong>
-
-            <div class="clear20x"></div>
-
             <form id="create">
-                <ul>
-                    <li><input type="text" data-coloris value="#DDEEEE"></li>
-                    <li><input type="text" data-coloris value="#E5D1B8"></li>
-                    <li><input type="text" data-coloris value="#2B2129"></li>
-                </ul>
+                <div class="step1">
+                    <h1>Vamos criar?</h1>
+                    <div class="clear10x"></div>
+                    <strong>Etapa 1/2 - Escolha 3 cores que você gosta</strong>
+                    <div class="clear20x"></div>
+                    <ul>
+                        <li><input type="text" data-coloris value="#DDEEEE"></li>
+                        <li><input type="text" data-coloris value="#E5D1B8"></li>
+                        <li><input type="text" data-coloris value="#2B2129"></li>
+                    </ul>
 
-                <button type="submit" class="btn">Criar</button>
+                    <button class="btn" onclick="goToStep2()">Ok, cores selecionadas</button>
+                </div>
+
+                <div class="step2">
+                    <h1>Finalizando!</h1>
+                    <div class="clear10x"></div>
+                    <strong>Etapa 2/2 - Escolha uma imagem sem fundo 1080x1080px</strong>
+                    <div class="clear20x"></div>
+                    <input type="file" id="fileInput" accept="image/png" required>
+
+                    <div class="clear20x"></div>
+                    <button type="submit" class="btn">Criar</button>
+                </div>
+
+                
             </form>
         </div>
 
         <div class="create-content1">
             <div class="create-content-box">
-                <strong>DAVINCI v1.0</strong>
+                <strong>DAVINCI v1.1</strong>
                 <hr>
+                
+                <div class="clear20x"></div>
                 <p>
                     DaVinci é o estado da arte na criação de artes generativas. Sem pensar muito,
-                    você pode criar posts e stories rapidamente usando seu navegador.
+                    você pode criar posts rapidamente usando seu navegador.
                 </p>
                 <div class="clear20x"></div>
                 <p>
-                    O processo é bem simples, basta escolher 3 cores para que DaVinci faça a combinação
-                    incrível para você. DaVinci é constantemente atualizado.
+                    O processo é bem simples, basta escolher 3 cores e uma imagem de destaque, para que DaVinci faça a combinação
+                    incrível para você. 
                 </p>
-                <div class="clear20x"></div>
+                <div class="clear10x"></div>
                 <p>
-                    Caso você seja desenvolvedor, você tem acesso livre ao código fonte,
-                    completamente documentado, você pode treinar DaVinci para fazer artes
-                    usando os elementos que você mesmo criar.
+                    DaVinci é constantemente atualizado.
                 </p>
             </div>
         </div>

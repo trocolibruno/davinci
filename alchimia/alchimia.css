@@ -87,7 +87,7 @@ BUTTONS
 }
 
 .btn:hover {
-    color: var(--secondary);
+    color: var(--primary);
     background-color: var(--alt);
 }
 
@@ -157,6 +157,10 @@ LOADING
 
 .loading-overlay {
     background-color: rgba(0, 0, 0, .9);
+}
+
+.loading-dark{
+    background-color: #1a1a1a;
 }
 
 #loading.hide {
