@@ -5,7 +5,7 @@
 # Credits
 
 #### Creative Direction, Development and UI & UX
-Bruno R. Trocoli
+<a href="https://www.behance.net/savetherobots">Bruno R. Trocoli</a>
 
 #### Favicon
 <a href="https://www.flaticon.com/free-icons/alchemy" title="alchemy icons">Alchemy icons created by Freepik - Flaticon</a>
