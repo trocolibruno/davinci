@@ -5,7 +5,7 @@
 # Credits
 
 #### Creative Direction, Development and UI & UX
-Bruno R. Troccoli
+Bruno R. Trocoli
 
 #### Favicon
 <a href="https://www.flaticon.com/free-icons/alchemy" title="alchemy icons">Alchemy icons created by Freepik - Flaticon</a>
