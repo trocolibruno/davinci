@@ -8,6 +8,9 @@ Imported Google Fonts, via Google Api.
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
+body{
+    font-family: "Montserrat", sans-serif;
+}
 .primary-font {
     font-family: "Montserrat", sans-serif;
 }
@@ -23,17 +26,17 @@ COLORS
 *********************************************/
 
 :root {
-    --primary: #4e4e4e;
-    --secondary: #F48072;
+    --primary: #111111;
+    --secondary: rgb(0, 225, 255);
     --alt: #CCCCCC;
 }
 
 ::selection {
-    background: var(--primary);
+    background: palegreen;
 }
 
 ::-moz-selection {
-    background: var(--primary);
+    background: palegreen;
 }
 
 .primary-color {
@@ -50,9 +53,28 @@ COLORS
 
 /*********************************************
 
+SPACES
+
+*********************************************/
+
+.clear10x {
+    height: 10px;
+}
+
+.clear20x {
+    height: 20px;
+}
+
+.clear30x {
+    height: 30px;
+}
+
+/*********************************************
+
 INPUTS
 
 *********************************************/
+
 input {
     font-family: "Montserrat", sans-serif;
     color: var(--primary);
@@ -74,21 +96,46 @@ BUTTONS
 *********************************************/
 .btn {
     font-family: "Montserrat", sans-serif;
-    background-color: var(--secondary);
+    background-color: var(--primary);
     color: aliceblue;
-    width: 100%;
+    width: auto;
     height: 40px;
     border-radius: 30px;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
     transition: background-color .5s ease-in-out;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 .btn:hover {
-    color: var(--primary);
-    background-color: var(--alt);
+    color: antiquewhite;
+    background-color: var(--secondary);
+}
+.btn-super {
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--primary);
+    color: aliceblue;
+    width: auto;
+    height: auto;
+    border-radius: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 20px;
+    transition: background-color .5s ease-in-out;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+.btn-super:hover {
+    color: antiquewhite;
+    background-color: var(--secondary);
 }
 
 /*********************************************
@@ -159,7 +206,7 @@ LOADING
     background-color: rgba(0, 0, 0, .9);
 }
 
-.loading-dark{
+.loading-dark {
     background-color: #1a1a1a;
 }
 
@@ -231,6 +278,7 @@ LOADING
 FIX
 
 *********************************************/
+
 * {
     box-sizing: border-box;
 }

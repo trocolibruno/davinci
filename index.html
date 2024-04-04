@@ -57,54 +57,56 @@
     </div>
 
     <section class="logo">
-        <img src="davinci/logo.svg">
+        <img src="davinci/logo.png">
     </section>
 
     <nav>
-        <a href="#partners">apoiadores</a>
+       <a class="btn" href="#partners">Parceiros</a>
     </nav>
 
     <section class="create">
 
+        <!-- tutorial -->
         <div class="create-content2">
             <form id="create">
                 <div class="step1">
                     <h1>Vamos criar?</h1>
                     <div class="clear10x"></div>
-                    <strong>Etapa 1/2 - Escolha 3 cores que você gosta</strong>
+                    <strong class="secondary-color">Etapa 1/2 </strong> Escolha 3 cores 
                     <div class="clear20x"></div>
+
                     <ul>
                         <li><input type="text" data-coloris value="#DDEEEE"></li>
                         <li><input type="text" data-coloris value="#E5D1B8"></li>
                         <li><input type="text" data-coloris value="#2B2129"></li>
                     </ul>
 
+                    <div class="clear20x"></div>
                     <button class="btn" onclick="goToStep2()">Ok, cores selecionadas</button>
                 </div>
 
                 <div class="step2">
-                    <h1>Finalizando!</h1>
+                    <h1>Finalizando...</h1>
                     <div class="clear10x"></div>
-                    <strong>Etapa 2/2 - Escolha uma imagem sem fundo 1080x1080px</strong>
+                    <strong class="secondary-color">Etapa 2/2 </strong> Adicione uma imagem
+                    de destaque. <br>(Sem fundo no tamanho de 1080x1080px)
+
+                    <div class="clear20x"></div>
+                    <input type="file" id="fileInput" accept="image/png" required>
                     <a href="https://raw.githubusercontent.com/yazu-i/davinci/main/models/example-girl.png" target="_blank">
                         Não tem imagem e quer testar? Download imagem de referência
                     </a>
-                    <div class="clear20x"></div>
-                    <input type="file" id="fileInput" accept="image/png" required>
 
                     <div class="clear20x"></div>
                     <button type="submit" class="btn">Criar</button>
                 </div>
 
-                
             </form>
         </div>
 
         <div class="create-content1">
             <div class="create-content-box">
-                <strong>DAVINCI v1.1</strong>
-                <hr>
-                
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/cu18dFT8PtM?si=ND144BjnXHvM93qq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <div class="clear20x"></div>
                 <p>
                     DaVinci é o estado da arte na criação de artes generativas. Sem pensar muito,
@@ -127,9 +129,12 @@
     <script>
         $(document).ready(function () {
             $("#partners").load("alchimia/partners/partners.html");
+            $("#footer").load("alchimia/footer/footer.html");
         });
     </script>
+    
     <div id="partners"></div>
+    <div id="footer"></div>
 
     <!-- tutorial -->
     <script type="text/javascript" src="davinci/create.js"></script>

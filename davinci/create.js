@@ -1,10 +1,24 @@
-$(".step2").hide();
+////////////////////////////////////////////////
 
-function goToStep2(){
+// NAVIGATION
+
+///////////////////////////////////////////////
+
+function partners() {
+    window.location.href = "#partners";
+}
+
+////////////////////////////////////////////////
+
+// TUTORIALS
+
+///////////////////////////////////////////////
+
+$(".step2").hide();
+function goToStep2() {
     $(".step1").slideToggle();
     $(".step2").delay(400).slideToggle();
 }
-
 document.addEventListener('DOMContentLoaded', function () {
     var form = document.getElementById('create');
 
@@ -33,5 +47,3 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
-
-
