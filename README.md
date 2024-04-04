@@ -2,11 +2,14 @@
 <img src="davinci/logo.svg" width="400px">
 <p align="center">
 
-# CREDITS
+# Credits
 
-#### DEV
+#### Creative Direction, Development and UI & UX
 Bruno R. Troccoli
 
-#### FAVICON
+#### Favicon
 <a href="https://www.flaticon.com/free-icons/alchemy" title="alchemy icons">Alchemy icons created by Freepik - Flaticon</a>
+
+#### UI Icons
+<a href="https://github.com/phosphor-icons/homepage#phosphor-icons">Phosphor Icons</a>
 
