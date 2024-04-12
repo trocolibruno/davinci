@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DɅVINCI</title>
+
+    <!-- 
+    
+        DEFAULT META TAGS
+        About...
+    
+    -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <!-- 
+    
+        CSS STYLES AND FAVICON
+        About...
+    
+    -->
+    <link rel="icon" type="image/svg+xml" href="alchimia/favicon.png">
+    <link rel="stylesheet" href="alchimia/alchimia.css">
+
+    <!-- 
+    
+        JAVASCRIPT DEPENDENCIES
+        About...
+    
+    -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script type="text/javascript" src="alchimia/alchimia.js"></script>
+</head>
+
+<body>
+    <!-- 
+    
+        LOADING EFFECT
+        About...
+    
+    -->
+    <!-- <div id="loading" class="loading-dark">
+        <div class="lds-ripple">
+            <div></div>
+            <div></div>
+        </div>
+    </div> -->
+
+    <!-- 
+    
+        MODULES
+        About...
+    
+    -->
+    <script>
+        $(document).ready(function () {
+            $("#nav").load("alchimia/nav-classic/nav-classic.html");
+            $("#partners").load("alchimia/partners/partners.html");
+            $("#footer").load("alchimia/footer/footer.html");
+        });
+    </script>
+
+    <div id="nav"></div>
+    <div id="partners"></div>
+    <div id="footer"></div>
+</body>
+
+</html>

@@ -56,14 +56,16 @@
         </div>
     </div>
 
-    <section class="logo">
-        <img src="davinci/logo.png">
-    </section>
+    <!-- ALCHIMIA TEMPLATES -->
+    <script>
+        $(document).ready(function () {
+            $("#nav").load("alchimia/nav-cta/nav-cta.html");
+            $("#partners").load("alchimia/partners/partners.html");
+            $("#footer").load("alchimia/footer/footer.html");
+        });
+    </script>
 
-    <nav>
-       <a class="btn" href="#partners">Parceiros</a>
-    </nav>
-
+    <div id="nav"></div>
     <section class="create">
 
         <!-- tutorial -->
@@ -72,7 +74,7 @@
                 <div class="step1">
                     <h1>Vamos criar?</h1>
                     <div class="clear10x"></div>
-                    <strong class="secondary-color">Etapa 1/2 </strong> Escolha 3 cores 
+                    <strong class="secondary-color">Etapa 1/2 </strong> Escolha 3 cores
                     <div class="clear20x"></div>
 
                     <ul>
@@ -93,7 +95,8 @@
 
                     <div class="clear20x"></div>
                     <input type="file" id="fileInput" accept="image/png" required>
-                    <a href="https://raw.githubusercontent.com/yazu-i/davinci/main/models/example-girl.png" target="_blank">
+                    <a href="https://raw.githubusercontent.com/yazu-i/davinci/main/models/example-girl.png"
+                        target="_blank">
                         Não tem imagem e quer testar? Download imagem de referência
                     </a>
 
@@ -106,7 +109,10 @@
 
         <div class="create-content1">
             <div class="create-content-box">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/cu18dFT8PtM?si=ND144BjnXHvM93qq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/cu18dFT8PtM?si=ND144BjnXHvM93qq"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <div class="clear20x"></div>
                 <p>
                     DaVinci é o estado da arte na criação de artes generativas. Sem pensar muito,
@@ -114,8 +120,9 @@
                 </p>
                 <div class="clear20x"></div>
                 <p>
-                    O processo é bem simples, basta escolher 3 cores e uma imagem de destaque, para que DaVinci faça a combinação
-                    incrível para você. 
+                    O processo é bem simples, basta escolher 3 cores e uma imagem de destaque, para que DaVinci faça a
+                    combinação
+                    incrível para você.
                 </p>
                 <div class="clear10x"></div>
                 <p>
@@ -125,19 +132,14 @@
         </div>
     </section>
 
-    <!-- import alchimia templates -->
-    <script>
-        $(document).ready(function () {
-            $("#partners").load("alchimia/partners/partners.html");
-            $("#footer").load("alchimia/footer/footer.html");
-        });
-    </script>
-    
     <div id="partners"></div>
     <div id="footer"></div>
 
     <!-- tutorial -->
     <script type="text/javascript" src="davinci/create.js"></script>
+    <script type="text/javascript">
+        scroll();
+    </script>
 </body>
 
 </html>

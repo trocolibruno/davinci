@@ -8,29 +8,11 @@ hr {
     border-bottom: 1px solid var(--alt) !important;
 }
 
-nav {
-    position: fixed;
-    width: 100%;
-    top: 30px;
-    right: 10px;
-    text-align: right;
-    padding-right: 5%;
-}
-
 /*********************************************
 
 CREATE
 
 *********************************************/
-.logo {
-    padding-left: 5%;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-.logo img {
-    width: 300px;
-}
 
 .create {
     padding-left: 5%;
