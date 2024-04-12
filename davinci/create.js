@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 localStorage.setItem('color1', color1);
                 localStorage.setItem('color2', color2);
                 localStorage.setItem('color3', color3);
-                window.location.href = "gen.html";
+                window.location.href = "gen-post.html";
             };
             reader.readAsDataURL(file);
         } else {

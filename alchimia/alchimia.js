@@ -4,12 +4,10 @@
 
 ///////////////////////////////////////////////
 
-$(window).on('load', function () {
-  $(".lds-ripple").fadeOut(function () {
-    $('#loading').slideToggle(500, function () {
-      
+$(window).on("load", function () {
+    $(".lds-ripple").fadeOut(function () {
+        $("#loading").slideToggle(500, function () {});
     });
-  });
 });
 
 ////////////////////////////////////////////////
@@ -19,20 +17,26 @@ $(window).on('load', function () {
 ///////////////////////////////////////////////
 
 var velocity = 600;
-function scroll(){
-  jQuery(document).ready(function ($) {
-    $('a[href^="#"]').bind('click.smoothscroll', function (e) {
-      e.preventDefault();
-      var target = this.hash,
-        $target = $(target);
-  
-      $('html, body').stop().animate({
-        'scrollTop': $target.offset().top - 5
-      }, velocity, function () {
-        window.location.hash = target;
-      });
+function scroll() {
+    jQuery(document).ready(function ($) {
+        $('a[href^="#"]').bind("click.smoothscroll", function (e) {
+            e.preventDefault();
+            var target = this.hash,
+                $target = $(target);
+
+            $("html, body")
+                .stop()
+                .animate(
+                    {
+                        scrollTop: $target.offset().top - 5
+                    },
+                    velocity,
+                    function () {
+                        window.location.hash = target;
+                    }
+                );
+        });
     });
-  });
 }
 
 ////////////////////////////////////////////////
@@ -42,13 +46,12 @@ function scroll(){
 ///////////////////////////////////////////////
 
 function modal() {
-  document.querySelector('.close').addEventListener('click', function () {
-    $(".modal").hide();
-  });
-  window.addEventListener('click', function (event) {
-    if (event.target.classList.contains('modal')) {
-      $(".modal").hide();
-    }
-  });
+    document.querySelector(".close").addEventListener("click", function () {
+        $(".modal").hide();
+    });
+    window.addEventListener("click", function (event) {
+        if (event.target.classList.contains("modal")) {
+            $(".modal").hide();
+        }
+    });
 }
-

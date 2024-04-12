@@ -10,6 +10,7 @@ Imported Google Fonts, via Google Api.
 
 body{
     font-family: "Montserrat", sans-serif;
+    font-weight: 500;
 }
 .primary-font {
     font-family: "Montserrat", sans-serif;
@@ -26,17 +27,17 @@ COLORS
 *********************************************/
 
 :root {
-    --primary: #111111;
-    --secondary: rgb(0, 225, 255);
+    --primary: #2a2a2a;
+    --secondary: #FF4D00;
     --alt: #CCCCCC;
 }
 
 ::selection {
-    background: palegreen;
+    background: orange;
 }
 
 ::-moz-selection {
-    background: palegreen;
+    background: orange;
 }
 
 .primary-color {

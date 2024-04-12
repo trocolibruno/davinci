@@ -1,145 +1,158 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+    <head>
+        <title>DɅVINCI</title>
 
-<head>
-    <title>DɅVINCI</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <link rel="icon" type="image/svg+xml" href="alchimia/favicon.png">
-    <link rel="stylesheet" href="alchimia/alchimia.css">
-    <link rel="stylesheet" href="davinci/ui.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <script type="text/javascript" src="alchimia/alchimia.js"></script>
+        <!-- DEFAULT META TAGS -->
 
-    <!-- coloris-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.css" />
-    <script src="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.js"></script>
-    <script type="text/javascript">
-        Coloris({
-            themeMode: 'dark',
-            alpha: false
-        });
-    </script>
-</head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, user-scalable=no" />
 
-<body>
-    <style>
-        .alert {
-            background-color: black;
-            color: white;
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            z-index: 99;
-            padding: 20px;
-            font-family: Arial, Helvetica, sans-serif;
-            display: none;
-        }
+        <!-- CSS STYLES AND FAVICON -->
 
-        @media screen and (orientation: portrait) {
-            .alert {
-                display: block;
-            }
-        }
-    </style>
-    <div class="alert">
-        Por favor use em um Desktop, versão de celular em desenvolvimento. Em breve concluída.
-    </div>
+        <link rel="icon" type="image/svg+xml" href="alchimia/favicon.png" />
+        <link rel="stylesheet" href="alchimia/alchimia.css" />
+        <link rel="stylesheet" href="davinci/ui.css" />
 
-    <!-- LOADING -->
-    <div id="loading" class="loading-dark">
-        <div class="lds-ripple">
-            <div></div>
-            <div></div>
-        </div>
-    </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+        <script type="text/javascript" src="alchimia/alchimia.js"></script>
 
-    <!-- ALCHIMIA TEMPLATES -->
-    <script>
-        $(document).ready(function () {
-            $("#nav").load("alchimia/nav-cta/nav-cta.html");
-            $("#partners").load("alchimia/partners/partners.html");
-            $("#footer").load("alchimia/footer/footer.html");
-        });
-    </script>
+        <!-- COLORIS https://coloris.js.org/ -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.js"></script>
+        <script type="text/javascript">
+            Coloris({
+                themeMode: "dark",
+                alpha: false
+            });
+        </script>
+    </head>
 
-    <div id="nav"></div>
-    <section class="create">
+    <body>
+        <!-- LOADING EFFECT -->
 
-        <!-- tutorial -->
-        <div class="create-content2">
-            <form id="create">
-                <div class="step1">
-                    <h1>Vamos criar?</h1>
-                    <div class="clear10x"></div>
-                    <strong class="secondary-color">Etapa 1/2 </strong> Escolha 3 cores
-                    <div class="clear20x"></div>
-
-                    <ul>
-                        <li><input type="text" data-coloris value="#DDEEEE"></li>
-                        <li><input type="text" data-coloris value="#E5D1B8"></li>
-                        <li><input type="text" data-coloris value="#2B2129"></li>
-                    </ul>
-
-                    <div class="clear20x"></div>
-                    <button class="btn" onclick="goToStep2()">Ok, cores selecionadas</button>
-                </div>
-
-                <div class="step2">
-                    <h1>Finalizando...</h1>
-                    <div class="clear10x"></div>
-                    <strong class="secondary-color">Etapa 2/2 </strong> Adicione uma imagem
-                    de destaque. <br>(Sem fundo no tamanho de 1080x1080px)
-
-                    <div class="clear20x"></div>
-                    <input type="file" id="fileInput" accept="image/png" required>
-                    <a href="https://raw.githubusercontent.com/yazu-i/davinci/main/models/example-girl.png"
-                        target="_blank">
-                        Não tem imagem e quer testar? Download imagem de referência
-                    </a>
-
-                    <div class="clear20x"></div>
-                    <button type="submit" class="btn">Criar</button>
-                </div>
-
-            </form>
-        </div>
-
-        <div class="create-content1">
-            <div class="create-content-box">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/cu18dFT8PtM?si=ND144BjnXHvM93qq"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <div class="clear20x"></div>
-                <p>
-                    DaVinci é o estado da arte na criação de artes generativas. Sem pensar muito,
-                    você pode criar posts rapidamente usando seu navegador.
-                </p>
-                <div class="clear20x"></div>
-                <p>
-                    O processo é bem simples, basta escolher 3 cores e uma imagem de destaque, para que DaVinci faça a
-                    combinação
-                    incrível para você.
-                </p>
-                <div class="clear10x"></div>
-                <p>
-                    DaVinci é constantemente atualizado.
-                </p>
+        <div id="loading" class="loading-dark">
+            <div class="lds-ripple">
+                <div></div>
+                <div></div>
             </div>
         </div>
-    </section>
 
-    <div id="partners"></div>
-    <div id="footer"></div>
+        <!-- MODULES -->
 
-    <!-- tutorial -->
-    <script type="text/javascript" src="davinci/create.js"></script>
-    <script type="text/javascript">
-        scroll();
-    </script>
-</body>
+        <div id="nav"></div>
 
+        <section class="create">
+            <!-- tutorial -->
+            <div class="create-content2">
+                <form id="create">
+                    <div class="step1">
+                        <h1>Vamos criar?</h1>
+                        <div class="clear10x"></div>
+                        <strong class="secondary-color">Etapa 1/2 </strong>
+                        Escolha 3 cores
+                        <div class="clear20x"></div>
+
+                        <ul>
+                            <li>
+                                <input
+                                    type="text"
+                                    data-coloris
+                                    value="#DDEEEE" />
+                            </li>
+                            <li>
+                                <input
+                                    type="text"
+                                    data-coloris
+                                    value="#E5D1B8" />
+                            </li>
+                            <li>
+                                <input
+                                    type="text"
+                                    data-coloris
+                                    value="#2B2129" />
+                            </li>
+                        </ul>
+
+                        <div class="clear20x"></div>
+                        <button class="btn" onclick="goToStep2()">
+                            Ok, cores selecionadas
+                        </button>
+                    </div>
+
+                    <div class="step2">
+                        <h1>Finalizando...</h1>
+                        <div class="clear10x"></div>
+                        <strong class="secondary-color">Etapa 2/2 </strong>
+                        Adicione uma imagem de destaque. <br />
+                        <small>Obs: Imagem em .png, fundo transparente e tamanho de 1080x1080px</small>
+
+                        <div class="clear20x"></div>
+                        <input
+                            type="file"
+                            id="fileInput"
+                            accept="image/png"
+                            required />
+                        
+                        <div class="clear10x"></div>
+                        <a
+                            href="https://raw.githubusercontent.com/yazu-i/davinci/main/models/example-girl.png"
+                            target="_blank">
+                            Não tem imagem e quer testar? 
+                            <br>Clique aqui e faça o Download.
+                        </a>
+
+                        <div class="clear20x"></div>
+                        <button type="submit" class="btn">Criar usando DaVinci</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="create-content1">
+                <div class="create-content-box">
+                    <iframe
+                        width="560"
+                        height="315"
+                        src="https://www.youtube.com/embed/cu18dFT8PtM?si=ND144BjnXHvM93qq"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen></iframe>
+                    <div class="clear20x"></div>
+                    <p>
+                        DaVinci é o estado da arte na criação de artes
+                        generativas. Sem pensar muito, você pode criar posts
+                        rapidamente usando seu navegador.
+                    </p>
+                    <div class="clear20x"></div>
+                    <p>
+                        O processo é bem simples, basta escolher 3 cores e uma
+                        imagem de destaque, para que DaVinci faça a combinação
+                        incrível para você.
+                    </p>
+                    <div class="clear10x"></div>
+                    <p>DaVinci é constantemente atualizado.</p>
+                </div>
+            </div>
+        </section>
+        <script type="text/javascript" src="davinci/create.js"></script>
+
+        <div id="partners"></div>
+        <div id="footer"></div>
+
+        <script>
+            $(document).ready(function () {
+                $("#nav").load("alchimia/nav-cta/nav-cta.html");
+                $("#partners").load("alchimia/partners/partners.html");
+                $("#footer").load("footer.html");
+            });
+        </script>
+    </body>
 </html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Generative Images</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/svg+xml" href="alchimia/favicon.png">
+    <link rel="stylesheet" href="alchimia/alchimia.css">
+    <link rel="stylesheet" href="davinci/ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script type="text/javascript" src="alchimia/alchimia.js"></script>
+</head>
+
+<body>
+    <!-- LOADING -->
+    <div id="loading" class="loading-overlay">
+        <div class="lds-ripple">
+            <div></div>
+            <div></div>
+        </div>
+        <!-- <a>remover loading</a> -->
+    </div>
+
+    <!-- TOOLS -->
+    <section class="tools">
+        <?xml version="1.0" encoding="utf-8"?>
+        <svg viewBox="0 0 1024 768" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M206.318 425.802H173V338.198H208.317C219.164 338.198 228.438 339.937 236.138 343.416C243.876 346.895 249.799 351.886 253.908 358.388C258.017 364.89 260.072 372.689 260.072 381.786C260.072 390.969 257.962 398.854 253.741 405.441C249.558 412 243.45 417.033 235.416 420.541C227.42 424.048 217.721 425.802 206.318 425.802ZM183.384 418.616H205.708C215.481 418.616 223.662 417.133 230.252 414.167C236.842 411.202 241.784 406.967 245.079 401.463C248.374 395.959 250.021 389.4 250.021 381.786C249.984 374.229 248.355 367.727 245.134 362.28C241.95 356.834 237.212 352.656 230.918 349.747C224.662 346.838 216.925 345.384 207.707 345.384H183.384V418.616Z"
+                fill="#4E4E4E" transform="matrix(1, 0, 0, 1, 0, -1.4210854715202004e-14)" />
+            <path
+                d="M404.721 338.198L440.261 415.408H441.26L476.8 338.198H487.684L446.313 425.802H435.207L393.837 338.198H404.721Z"
+                fill="#4E4E4E" transform="matrix(1, 0, 0, 1, 0, -1.4210854715202004e-14)" />
+            <path d="M533.197 338.198V425.802H522.812V338.198H533.197Z" fill="#4E4E4E"
+                transform="matrix(1, 0, 0, 1, 0, -1.4210854715202004e-14)" />
+            <path
+                d="M667.642 338.198V425.802H657.535L590.343 352.442H589.455V425.802H579.07V338.198H589.121L656.536 411.644H657.424V338.198H667.642Z"
+                fill="#4E4E4E" transform="matrix(1, 0, 0, 1, 0, -1.4210854715202004e-14)" />
+            <path
+                d="M802.587 365.574H792.147C791.369 362.58 789.963 359.814 787.926 357.276C785.927 354.709 783.41 352.471 780.374 350.56C777.339 348.649 773.896 347.166 770.046 346.111C766.195 345.056 762.031 344.529 757.551 344.529C750.369 344.529 743.817 345.969 737.893 348.849C732.007 351.729 727.287 355.964 723.733 361.553C720.216 367.114 718.458 373.93 718.458 382C718.458 390.127 720.216 396.971 723.733 402.532C727.287 408.093 732.007 412.314 737.893 415.194C743.817 418.046 750.369 419.471 757.551 419.471C762.031 419.471 766.195 418.944 770.046 417.889C773.896 416.834 777.339 415.365 780.374 413.483C783.41 411.572 785.927 409.334 787.926 406.767C789.963 404.201 791.369 401.42 792.147 398.426H802.587C801.661 402.447 799.921 406.197 797.367 409.676C794.849 413.126 791.628 416.149 787.704 418.744C783.817 421.339 779.338 423.364 774.266 424.818C769.194 426.273 763.623 427 757.551 427C748 427 739.522 425.161 732.118 421.482C724.714 417.775 718.902 412.556 714.682 405.826C710.498 399.096 708.407 391.154 708.407 382C708.407 372.846 710.498 364.904 714.682 358.174C718.902 351.444 724.714 346.24 732.118 342.561C739.522 338.854 748 337 757.551 337C763.623 337 769.194 337.727 774.266 339.182C779.338 340.607 783.817 342.632 787.704 345.256C791.628 347.851 794.849 350.874 797.367 354.324C799.921 357.775 801.661 361.525 802.587 365.574Z"
+                fill="#4E4E4E" transform="matrix(1, 0, 0, 1, 0, -1.4210854715202004e-14)" />
+            <path d="M853 338.198V425.802H842.616V338.198H853Z" fill="#4E4E4E"
+                transform="matrix(1, 0, 0, 1, 0, -1.4210854715202004e-14)" />
+            <path
+                d="M404.721 338.198L440.261 415.408H441.26L476.8 338.198H487.684L446.313 425.802H435.207L393.837 338.198H404.721Z"
+                fill="#4E4E4E" transform="matrix(1, 0, 0, 1, 0, -1.4210854715202004e-14)" />
+            <path
+                d="M367.478 425.802L331.939 348.592H330.939L295.399 425.802H284.515L325.886 338.198L336.992 338.198L378.362 425.802H367.478Z"
+                fill="#4E4E4E" transform="matrix(1, 0, 0, 1, 0, -1.4210854715202004e-14)" />
+        </svg>
+
+        <ul>
+            <li>
+                <a onclick="imagine()">
+                    <i class="ph-thin ph-atom"></i>
+                    imagine
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html">
+                    <i class="ph-thin ph-arrow-circle-left"></i>
+                    voltar
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- POST ARTBOARDS -->
+    <small class="tips">
+        Dica: Clique no ícone imagine, para gerar 3 novas artes.
+    </small>
+    <section class="artboards" id="posts">
+        <div class="artboard">
+            <canvas id="layer1P1" class="layers layer1"></canvas>
+            <canvas id="layer2P1" class="layers layer2"></canvas>
+            <canvas id="layer3P1" class="layers layer3"></canvas>
+            <canvas id="layer4P1" class="layers layer4"></canvas>
+            <canvas id="layer5P1" class="layers layer5"></canvas>
+            <canvas id="layer6P1" class="layers layer6"></canvas>
+            <canvas id="layer7P1" class="layers layer7"></canvas>
+
+            <ul class="controls">
+                <li>
+                    <button onclick="renderPost1()"><i class="ph-thin ph-image"></i></button>
+                </li>
+                <!-- <li>
+                    <button onclick="renderPostLayers1()"><i class="ph-thin ph-images"></i></button>
+                </li> -->
+            </ul>
+        </div>
+
+        <div class="artboard">
+            <canvas id="layer1P2" class="layers layer1"></canvas>
+            <canvas id="layer2P2" class="layers layer2"></canvas>
+            <canvas id="layer3P2" class="layers layer3"></canvas>
+            <canvas id="layer4P2" class="layers layer4"></canvas>
+            <canvas id="layer5P2" class="layers layer5"></canvas>
+            <canvas id="layer6P2" class="layers layer6"></canvas>
+            <canvas id="layer7P2" class="layers layer7"></canvas>
+
+            <ul class="controls">
+                <li>
+                    <button onclick="renderPost2()"><i class="ph-thin ph-image"></i></button>
+                </li>
+                <!-- <li>
+                    <button onclick="renderPostLayers2()"><i class="ph-thin ph-images"></i></button>
+                </li> -->
+            </ul>
+        </div>
+
+        <div class="artboard">
+            <canvas id="layer1P3" class="layers layer1"></canvas>
+            <canvas id="layer2P3" class="layers layer2"></canvas>
+            <canvas id="layer3P3" class="layers layer3"></canvas>
+            <canvas id="layer4P3" class="layers layer4"></canvas>
+            <canvas id="layer5P3" class="layers layer5"></canvas>
+            <canvas id="layer6P3" class="layers layer6"></canvas>
+            <canvas id="layer7P3" class="layers layer7"></canvas>
+
+            <ul class="controls">
+                <li>
+                    <button onclick="renderPost3()"><i class="ph-thin ph-image"></i></button>
+                </li>
+                <!-- <li>
+                    <button onclick="renderPostLayers3()"><i class="ph-thin ph-images"></i></button>
+                </li> -->
+            </ul>
+        </div>
+    </section>
+
+    <!-- MODEL -->
+    <script type="text/javascript" src="models/diffusion/diffusion.js"></script>
+
+    <!-- DAVINCI ENGINE -->
+    <script type="text/javascript" src="davinci/layers.js"></script>
+    <script type="text/javascript" src="davinci/focus.js"></script>
+    <script type="text/javascript" src="davinci/davinci.js"></script>
+    <script type="text/javascript" src="davinci/random-colors.js"></script>
+    <script type="text/javascript" src="davinci/render.js"></script>
+</body>
+
+</html>
