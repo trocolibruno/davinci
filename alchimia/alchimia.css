@@ -5,10 +5,10 @@ Imported Google Fonts, via Google Api.
 
 *********************************************/
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
-body{
+body {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
 }
@@ -28,8 +28,8 @@ COLORS
 
 :root {
     --primary: #2a2a2a;
-    --secondary: #FF4D00;
-    --alt: #CCCCCC;
+    --secondary: #c48d4a;
+    --alt: #cccccc;
 }
 
 ::selection {
@@ -58,22 +58,25 @@ SPACES
 
 *********************************************/
 
-.clear10x {
-    height: 10px;
-}
+.clear10x { height: 10px; }
+.clear20x { height: 20px; }
+.clear30x { height: 30px; }
+.clear40x { height: 40px; }
+.clear50x { height: 50px; }
 
-.clear20x {
-    height: 20px;
-}
+/*********************************************
 
-.clear30x {
-    height: 30px;
+LINES DIVISORS
+
+*********************************************/
+
+.line-1x {
+    border-top: 1px solid var(--alt);
+    margin: 0 auto;
 }
-.clear40x {
-    height: 40px;
-}
-.clear50x {
-    height: 50px;
+.line-3x {
+    border-top: 3px solid var(--alt);
+    margin: 0 auto;
 }
 
 /*********************************************
@@ -96,7 +99,6 @@ input {
     padding-left: 20px !important;
 }
 
-
 /*********************************************
 
 BUTTONS
@@ -114,7 +116,7 @@ BUTTONS
     text-transform: uppercase;
     font-weight: 500;
     font-size: 12px;
-    transition: background-color .5s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
     padding-left: 3%;
     padding-right: 3%;
     padding-top: 1%;
@@ -126,7 +128,7 @@ BUTTONS
     background-color: var(--secondary);
 }
 
-.btn-mini{
+.btn-mini {
     font-family: "Montserrat", sans-serif;
     background-color: var(--primary);
     color: aliceblue;
@@ -137,7 +139,7 @@ BUTTONS
     text-transform: uppercase;
     font-weight: 500;
     font-size: 10px;
-    transition: background-color .5s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
     padding-left: 1%;
     padding-right: 1%;
     padding-top: 1%;
@@ -160,11 +162,11 @@ BUTTONS
     text-transform: uppercase;
     font-weight: 300;
     font-size: 20px;
-    transition: background-color .5s ease-in-out;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 3%;
-    padding-bottom: 3%;
+    transition: background-color 0.5s ease-in-out;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 .btn-super:hover {
     color: antiquewhite;
@@ -198,7 +200,7 @@ MODAL
     position: relative;
     font-family: "Montserrat", sans-serif;
 }
-.modal-center{
+.modal-center {
     text-align: center;
 }
 
@@ -235,11 +237,11 @@ LOADING
     align-items: center;
     justify-content: center;
     opacity: 1;
-    transition: opacity .5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .loading-overlay {
-    background-color: rgba(0, 0, 0, .9);
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 .loading-dark {
@@ -366,7 +368,6 @@ strong {
     margin-block-end: 0em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-
 }
 
 a {
