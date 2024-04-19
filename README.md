@@ -4,21 +4,17 @@
 
 # Credits
 
-#### Creative Direction, Development and UI & UX
+###### Creative Direction, Development and UI & UX
+<a href="https://www.behance.net/savetherobots" target="_blank">Bruno R. Trocoli</a>
 
-<a href="https://www.behance.net/savetherobots">Bruno R. Trocoli</a>
-
-#### Favicon
-
-<a href="https://www.flaticon.com/free-icons/alchemy" title="alchemy icons">Alchemy
+###### Contributors
+● <a href="https://github.com/lucasbalani" target="_blank">Lucas Balani</a><br>
+● <a href="https://www.flaticon.com/free-icons/alchemy" target="_blank">Alchemy
 icons created by Freepik - Flaticon</a>
 
-#### UI Icons
-
-<a href="https://github.com/phosphor-icons/homepage#phosphor-icons">Phosphor
-Icons</a>
-
-#### Javascript Dependencies
-
+###### Javascript Dependencies
+● <a href="https://github.com/phosphor-icons/homepage#phosphor-icons">Phosphor
+Icons</a><br>
 <a href="https://coloris.js.org/">● Coloris</a><br>
 <a href="https://jquery.com/">● Jquery</a>
+<br><br>
